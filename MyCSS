@@ -1,0 +1,112 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:700);
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    text-shadow: 0 0 1px #000, 0 0 2px #000;
+    background: {background_color};
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: {font_size};
+    line-height: 1.5em;
+    color: {text_color};
+}
+
+#log>div {
+    /*animation: flipInX .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: fadeInRight .3s ease forwards, fadeOut 0.5s ease {message_hide_delay} forwards;*/
+    animation: flipInX 700ms ease, fadeOutUp 0.5s ease {message_hide_delay} forwards;
+    -webkit-animation: flipInX 700ms ease, fadeOutUp 0.5s ease {message_hide_delay} forwards;
+    margin-bottom: 5px;
+    background: {color0};
+    opacity: {opacity0} ;
+    padding: 5px 10px 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+}
+
+.colon {
+    display: none;
+}
+
+#log {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    padding: 10px 15px;
+    padding-top: 100px;
+}
+
+
+#log>div {
+    /*display: table-row;*/
+  display: block;
+}
+
+#log>div.deleted {
+    visibility: hidden;
+}
+
+#log .emote {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 0.4em 0.2em;
+    position: relative;
+}
+
+#log .emote img {
+    display: inline-block;
+    height: 1em;
+    opacity: 0;
+}
+
+#log .message,#log .meta {
+    vertical-align: top;
+    display: table-cell;
+    padding-bottom: 0.1em;
+}
+
+#log .meta {
+    /*width: 35%;
+    text-align: right;
+    padding-right: 0.5em;
+    text-overflow: ellipsis;*/
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    line-height: 1em;
+}
+
+#log .message {
+    /*word-wrap: break-word;
+    width: 65%;*/
+    word-wrap: break-word;
+    line-height: 1em;
+    display: block;
+}
+
+.badge {
+    /*display: inline-block;
+    margin-right: 0.2em;
+    position: relative;
+    height: 1em;
+    vertical-align: middle;*/
+    top: -0.1em;
+    float: right;
+    padding-left: 5px;
+    height: 0.6em;
+}
+
+.name {
+    /*margin-left: 0.2em;*/
+    font-size: 0.6em;
+    text-transform: uppercase;
+    font-weight: 700;
+}
