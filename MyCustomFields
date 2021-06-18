@@ -1,0 +1,15 @@
+{
+    "color0": {
+        "label": "Color 0",
+        "type": "colorpicker",
+        "value": "#32679A"
+    },
+    "opacity0": {
+        "label": "Transparencia 0",
+        "max": 1,
+        "min": 0,
+        "steps": 0.05,
+        "type": "slider",
+        "value": 0.45
+    }
+}
