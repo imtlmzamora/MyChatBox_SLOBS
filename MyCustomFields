@@ -1,15 +1,98 @@
 {
-    "color0": {
-        "label": "Color 0",
-        "type": "colorpicker",
-        "value": "#32679A"
-    },
-    "opacity0": {
-        "label": "Transparencia 0",
+    "bckg-opacity": {
+        "label": "Opacity Background",
+        "type": "slider",
+        "name": "",
+        "value": 0.6,
         "max": 1,
         "min": 0,
-        "steps": 0.05,
+        "steps": 0.1
+    },
+    "font-choosen": {
+        "label": "Font",
+        "type": "fontpicker",
+        "value": "Bebas Neue"
+    },
+    "message-box-margin": {
+        "label": "Spacing Between User",
         "type": "slider",
-        "value": 0.45
+        "name": "Spacing Between User",
+        "value": 3,
+        "max": 30,
+        "min": 0,
+        "steps": 1
+    },
+    "font-size": {
+        "label": "Font Size",
+        "type": "slider",
+        "name": "",
+        "value": 30,
+        "max": 60,
+        "min": 10,
+        "steps": 1
+    },
+    "font-weight": {
+        "label": "Font Weight",
+        "type": "slider",
+        "name": "",
+        "value": 397,
+        "max": 900,
+        "min": 100,
+        "steps": 100
+    },
+    "wrapper-background-color": {
+        "label": "Background Color",
+        "type": "colorpicker",
+        "value": "#3C3C3C"
+    },
+    "wrapper-border-size": {
+        "label": "Border Size",
+        "type": "slider",
+        "name": "Border Size",
+        "value": 2,
+        "max": 10,
+        "min": 0,
+        "steps": 1
+    },
+    "wrapper-padding": {
+        "label": "Side Padding",
+        "type": "slider",
+        "name": "Border Size",
+        "value": 5,
+        "max": 15,
+        "min": 0,
+        "steps": 1
+    },
+    "wrapper-border-color": {
+        "label": "Border Color",
+        "type": "colorpicker",
+        "value": "#50E3C2"
+    },
+    "wrapper-border-radius": {
+        "label": "Border Radius",
+        "type": "slider",
+        "name": "",
+        "value": 10,
+        "max": 25,
+        "min": 0,
+        "steps": 1
+    },
+    "name-transform": {
+        "label": "Username Text Transform",
+        "type": "dropdown",
+        "options": {
+            "none": "None",
+            "uppercase": "Uppercase"
+        },
+        "value": "uppercase"
+    },
+    "message-transform": {
+        "label": "Message Text Transform",
+        "type": "dropdown",
+        "options": {
+            "none": "None",
+            "uppercase": "Uppercase"
+        },
+        "value": "uppercase"
     }
 }
