@@ -1,10 +1,33 @@
+var r = document.querySelector(':root');
 // Please use event listeners to run functions.
 document.addEventListener('onLoad', function(obj) {
-	// obj will be empty for chat widget
-	// this will fire only once when the widget loads
+    // obj will be empty for chat widget
+    // this will fire only once when the widget loads
+  var rs = getComputedStyle(r);
+  set_bckg_RGBA(rs.getPropertyValue('--bgcolor'));
 });
 
+
 document.addEventListener('onEventReceived', function(obj) {
-  	// obj will contain information about the event
-	
+    // obj will contain information about the event
+  	console.log(obj.detail); // OBJ Logs
+ 
+    if (obj.detail.command === "PRIVMSG") // Prevent animation for ping events - Curtis Geiger
+    {
+        $('#log>div').last().hide().slideToggle(600, "easeInOutQuart"); //New animation code
+    }
+  
 });
+
+function set_bckg_RGBA(hex) {
+  // Set the value of variable --blue to another value (in this case "lightblue")
+  var rs = getComputedStyle(r);
+  var bgcolor = hex.trim();
+  bgcolor = bgcolor.replace('"','');
+  bgcolor = bgcolor.replace('"','');
+  var result2 = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(bgcolor);
+  var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(bgcolor);
+  r.style.setProperty('--bgcolor-red', parseInt(result[1], 16));
+  r.style.setProperty('--bgcolor-blue', parseInt(result[2], 16));
+  r.style.setProperty('--bgcolor-green', parseInt(result[3], 16));
+};
